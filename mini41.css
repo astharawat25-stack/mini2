@@ -1,0 +1,204 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at top left, #fbc2eb, transparent 40%),
+        radial-gradient(circle at bottom right, #a18cd1, transparent 45%),
+        linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Main Card */
+.container {
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 35px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+
+    box-shadow: 0 25px 60px rgba(35, 20, 75, 0.25);
+    animation: appear 0.7s ease;
+}
+
+/* Card Animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.container > p {
+    color: #77718b;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* Label */
+label {
+    display: block;
+    text-align: left;
+    color: #3f315c;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Dropdown */
+select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9d5ff;
+    border-radius: 13px;
+
+    background: #faf7ff;
+    color: #4c1d95;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+select:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.12);
+}
+
+/* Joke Button */
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 16px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    color: white;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+    box-shadow: 0 9px 20px rgba(139, 92, 246, 0.28);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 13px 25px rgba(139, 92, 246, 0.35);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Status Message */
+#status {
+    margin: 16px 0 0;
+    color: #7c3aed;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* Joke Result Card */
+.joke-box {
+    margin-top: 28px;
+    padding: 25px 20px;
+
+    background: linear-gradient(135deg, #faf5ff, #fdf2f8);
+    border: 1px solid #ead5ff;
+    border-radius: 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.joke-box::before {
+    content: "✨";
+    display: block;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.joke-box h2 {
+    color: #7c3aed;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+#joke {
+    color: #514466;
+    font-size: 14px;
+    line-height: 1.9;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 28px 20px;
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .joke-box {
+        padding: 20px 15px;
+    }
+}

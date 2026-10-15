@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Joke Generator</title>
+    <link rel="stylesheet" href="mini41.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>😂 AI Joke Generator</h1>
+        <p>Need a laugh? Let Gemini make you smile!</p>
+
+        <label for="category">Choose a joke category:</label>
+
+        <select id="category">
+            <option value="general">General</option>
+            <option value="programming">Programming</option>
+            <option value="school">School</option>
+            <option value="science">Science</option>
+        </select>
+
+        <button id="jokeBtn">Tell Me a Joke 🎭</button>
+
+        <p id="status" aria-live="polite"></p>
+
+        <div class="joke-box">
+            <h2>Your Joke</h2>
+            <p id="joke">Your funny joke will appear here!</p>
+        </div>
+    </div>
+
+    <script src="mini41.js"></script>
+</body>
+</html>
